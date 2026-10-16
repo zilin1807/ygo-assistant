@@ -1,0 +1,69 @@
+# =====================================================
+#  YGO Assistant - .gitignore
+#  保护：API key / 数据库 / 训练样本 / 构建产物
+# =====================================================
+
+# === 凭据 — 千万别进 git ===
+.env
+.env.local
+.env.*.local
+*.key
+secrets.json
+
+# === Python 字节码 / 缓存 ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# === 构建产物 — 60MB exe 不入库（走 GitHub Releases 分发） ===
+build/
+dist/
+release/
+*.spec.bak
+
+# === 运行期数据 — 用户私有 ===
+data/
+logs/
+*.log
+runtime.log
+
+# === 桌面精灵训练样本（聚合后另存 / 单独 repo） ===
+training_data/
+sft/
+dpo/
+neglected_samples.jsonl
+
+# === 用户数据库 — 含个人决策历史 ===
+*.db
+*.sqlite
+*.sqlite3
+memory.db
+
+# === 截图临时文件 ===
+*.tmp.png
+frame_*.png
+tmp_*.png
+
+# === IDE / 编辑器 ===
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# === WorkBuddy 工作区元数据（不是项目的一部分） ===
+.workbuddy/
+
+# === 虚拟环境 ===
+venv/
+.venv/
+env/
+
+# === 测试覆盖率 ===
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/

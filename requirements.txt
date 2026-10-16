@@ -1,0 +1,21 @@
+# 游戏王 AI 桌面助手 - 依赖清单
+# Python 3.11+ 推荐（实测 3.13 可用）
+
+# GUI 框架 - PySide6 比 PyQt6 更现代且对 Python 3.13 兼容更好
+PySide6>=6.7.0
+
+# 屏幕截取
+mss>=9.0.1
+Pillow>=10.0.0
+
+# Windows 窗口定位（游戏窗口自动识别）
+pywin32>=306; sys_platform == "win32"
+
+# 多模态 LLM SDK（通义千问 DashScope）
+# 也可用 openai 兼容模式调用 GLM-4V 等
+dashscope>=1.20.0
+openai>=1.30.0  # 备用：兼容 OpenAI 协议的国内模型
+
+# 配置 & 工具
+python-dotenv>=1.0.1
+requests>=2.31.0
