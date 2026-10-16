@@ -34,6 +34,7 @@ training_data/
 sft/
 dpo/
 neglected_samples.jsonl
+demo_run.txt
 
 # === 用户数据库 — 含个人决策历史 ===
 *.db
